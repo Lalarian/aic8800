@@ -1,0 +1,22 @@
+From 2581fb2d5e7a7a870a5cb25e28038ccadf5e60e3 Mon Sep 17 00:00:00 2001
+From: Lalarian <Lalarian@users.noreply.github.com>
+Date: Sat, 15 Mar 2025 14:22:10 +0000
+Subject: [PATCH] Update aicwf_wext_linux.c
+
+Remove unused variable in line 619 because of build failing due to 'warning: unused variable'.
+---
+ .../driver_fw/drivers/aic8800/aic8800_fdrv/aicwf_wext_linux.c    | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/USB/driver_fw/drivers/aic8800/aic8800_fdrv/aicwf_wext_linux.c b/src/USB/driver_fw/drivers/aic8800/aic8800_fdrv/aicwf_wext_linux.c
+index f21ed95..90424c1 100644
+--- a/src/USB/driver_fw/drivers/aic8800/aic8800_fdrv/aicwf_wext_linux.c
++++ b/src/USB/driver_fw/drivers/aic8800/aic8800_fdrv/aicwf_wext_linux.c
+@@ -616,7 +616,6 @@ static inline char *aicwf_get_iwe_stream_rate(struct rwnx_hw* rwnx_hw,
+ 	u16 vht_data_rate = 0;
+ 
+ 	u16 he_cap = false;
+-	u8 he_ch_width_set = 0;
+ 	u8 he_bw = 0;
+ 
+ 	/* parsing HT_CAP_IE	 */
